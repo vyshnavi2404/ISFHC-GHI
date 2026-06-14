@@ -1,0 +1,31 @@
+dataset:
+  train_split: 0.7
+  test_split: 0.3
+
+preprocessing:
+  gaussian_kernel: 5
+
+segmentation:
+  input_size: 256
+
+feature_extraction:
+  hos: true
+  multitexton: true
+  color: true
+
+classification:
+  classifier_1: LinkNet
+  classifier_2: SqueezeNet
+
+fusion:
+  method: Improved Score-Level Fusion
+
+evaluation:
+  metrics:
+    - Accuracy
+    - Precision
+    - Recall
+    - Specificity
+    - FMeasure
+    - MCC
+    - NPV
